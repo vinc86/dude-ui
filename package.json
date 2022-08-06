@@ -1,6 +1,6 @@
 {
   "name": "buddy-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "UI Component Library for personal projects",
   "main": "index.tsx",
   "scripts": {
