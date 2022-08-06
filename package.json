@@ -1,5 +1,5 @@
 {
-  "name": "buddy/ui",
+  "name": "buddy-ui",
   "version": "1.0.0",
   "description": "UI Component Library for personal projects",
   "main": "index.tsx",
