@@ -14,7 +14,7 @@ module.exports = {
   /** "entry"
    * the entry point
    */
-  entry: "./index.tsx",
+  entry: { vendor: ["styled-components"], app: "./index.tsx" },
   output: {
     /** "path"
      * the folder path of the output file
