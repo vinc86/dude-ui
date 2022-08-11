@@ -1,32 +1,26 @@
-import React, { FC } from "react";
-import styled from "styled-components";
+import React, { FC } from 'react';
+import styled from 'styled-components';
 
 type Props = {
-  label: string;
-  rounded?: boolean;
-  background?: string;
+    label: string;
+    rounded?: boolean;
+    background?: string;
 };
 
-const Button: FC<Props & React.ButtonHTMLAttributes<HTMLButtonElement>> = ({
-  label,
-  rounded = false,
-  background,
-  ...props
-}) => {
-  return (
-    <ButtonComponent rounded={rounded} {...props}>
-      {label}
-    </ButtonComponent>
-  );
+export const Button: FC<Props & React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ label, rounded = false, background, ...props }) => {
+    return (
+        <ButtonComponent rounded={rounded} {...props}>
+            {label}
+        </ButtonComponent>
+    );
 };
 
 type StyleProps = {
-  background?: string;
-  rounded?: boolean;
+    background?: string;
+    rounded?: boolean;
 };
 const ButtonComponent = styled.button<StyleProps>`
-  background: ${({ background }) => background && background};
-  border-radius: ${(props) => props.rounded && "10px"};
-  padding: 10px;
+    background: ${({ background }) => background && background};
+    border-radius: ${(props) => props.rounded && '10px'};
+    padding: 10px;
 `;
-export default Button;
