@@ -1,10 +1,9 @@
 {
     "name": "buddy-ui",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "UI Component Library for personal projects",
-    "main": "dist/index.ts",
-    "module": "dist/cjs/index.ts",
-    "types": "dist/esm/index.d.ts",
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
     "files": [
         "dist"
     ],
