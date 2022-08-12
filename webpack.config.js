@@ -10,11 +10,11 @@ module.exports = {
    * the environment - development, production, none. tells webpack
    * to use its built-in optimizations accordingly. default is production
    */
-  mode: prod ? "production" : "development",
+  mode: "development",
   /** "entry"
    * the entry point
    */
-  entry: { vendor: ["styled-components"], app: "./index.tsx" },
+  entry: "./index.tsx",
   output: {
     /** "path"
      * the folder path of the output file
@@ -23,7 +23,7 @@ module.exports = {
     /** "filename"
      * the name of the output file
      */
-    filename: "main.js",
+    filename: "[main].js",
   },
   /** "target"
    * setting "node" as target app (server side), and setting it as "web" is
@@ -80,8 +80,8 @@ module.exports = {
         use: "ts-loader", //loader which we are going to use
       },
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        test: /\.sa?css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
     ],
   },
@@ -107,5 +107,33 @@ module.exports = {
 - devtool sets the config for source maps
 - plugins contains all plugins with their settings
 
+
+*/
+
+/* 
+
+// webpack.config.js
+
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = ({ mode } = { mode: "production" }) => {
+    console.log(`mode is: ${mode}`);
+
+    return {
+            mode,
+            entry: "./src/index.js",
+            output: {
+                publicPath: "/",
+                path: path.resolve(__dirname, "build"),
+                filename: "bundled.js"
+            },
+            plugins: [
+                new HtmlWebpackPlugin({
+                    template: "./public/index.html"
+                }),
+            ]
+        }
+};
 
 */
