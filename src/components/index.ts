@@ -1,2 +1,4 @@
 export * from "./Button";
-export * from "./Styles";
+export * from "./Input";
+export * from "./Form";
+export * from "./Text";

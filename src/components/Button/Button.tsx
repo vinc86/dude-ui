@@ -1,7 +1,8 @@
 import React, { FC } from "react";
 import styled from "styled-components";
-import { colors } from "../Styles/styles";
-import { ButtonSize, Colors, Sizes } from "./types";
+import { styles } from "../Styles/styles";
+import { Colors } from "../common/types";
+import { ButtonSize, Sizes } from "./types";
 import { getFontColor } from "./utils";
 
 const buttonSizes = {
@@ -10,7 +11,7 @@ const buttonSizes = {
   large: "12px 62px",
 };
 const fontSize = {
-  small: "14px",
+  small: "16px",
   medium: "20px",
   large: "30px",
 };
@@ -46,12 +47,17 @@ type StyleProps = {
 };
 const ButtonComponent = styled.button<StyleProps>((props) => {
   return `
-        background: ${colors[props.color as keyof typeof colors]};
+        background: ${styles.colors[props.color as keyof typeof styles.colors]};
         font-size: ${fontSize[props.size as keyof typeof buttonSizes]};
         border-radius: ${props.rounded && "10px"};
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        letter-spacing: 0.5px;
         color: ${getFontColor(props.color)};
         border: none;
-        font-weight: ${props.size === ButtonSize.Small ? 600 : 500};
+        font-weight: 600;
+        display: flex;
+        cursor: pointer;
+        margin: auto;
         padding: ${buttonSizes[props.size as keyof typeof buttonSizes]};
     `;
 });

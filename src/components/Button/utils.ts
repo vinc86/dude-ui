@@ -1,12 +1,13 @@
-import { colors } from "../Styles/styles";
-import { ButtonColor, Colors } from "./types";
+import { Colors } from "../common/types";
+import { styles } from "../Styles/";
+import { ButtonColor } from "./types";
 
 export const getFontColor = (background: Colors) => {
   switch (background) {
     case ButtonColor.ice:
     case ButtonColor.silver:
-      return colors.midnight;
+      return styles.colors.midnight;
     default:
-      return colors.white;
+      return styles.colors.white;
   }
 };

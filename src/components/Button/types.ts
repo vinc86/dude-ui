@@ -20,18 +20,3 @@ export enum ButtonColor {
   silver = "silver",
 }
 export type Sizes = "small" | "medium" | "large" | ({} & string);
-export type Colors =
-  | "turquoise"
-  | "emerald"
-  | "river"
-  | "amethyst"
-  | "asphalt"
-  | "midnight"
-  | "sun"
-  | "carrot"
-  | "pumpkin"
-  | "paprika"
-  | "ice"
-  | "silver"
-  | "white"
-  | ({} & string);

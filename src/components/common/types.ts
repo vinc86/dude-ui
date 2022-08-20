@@ -1,0 +1,15 @@
+export type Colors =
+  | "turquoise"
+  | "emerald"
+  | "river"
+  | "amethyst"
+  | "asphalt"
+  | "midnight"
+  | "sun"
+  | "carrot"
+  | "pumpkin"
+  | "paprika"
+  | "ice"
+  | "silver"
+  | "white"
+  | ({} & string);
