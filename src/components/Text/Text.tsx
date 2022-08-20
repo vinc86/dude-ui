@@ -16,18 +16,22 @@ export const Text: FC<{
   isHeading = false,
   separator = false,
 }) => {
-    return (
-      <ParagraphContent separator={separator}>
-        {label && <Label htmlFor="content">{label}</Label>}
-        {isHeading ? (
-          <h2 style={{ margin: "2px 0" }} id="content">{children}</h2>
-        ) : (
-          <p style={{ margin: "2px 0" }} id="content">{children}</p>
-        )}
-        {subtitleContent && <Subtitle>{subtitleContent}</Subtitle>}
-      </ParagraphContent>
-    );
-  };
+  return (
+    <ParagraphContent separator={separator}>
+      {label && <Label htmlFor="content">{label}</Label>}
+      {isHeading ? (
+        <h2 style={{ margin: "2px 0" }} id="content">
+          {children}
+        </h2>
+      ) : (
+        <p style={{ margin: "2px 0" }} id="content">
+          {children}
+        </p>
+      )}
+      {subtitleContent && <Subtitle>{subtitleContent}</Subtitle>}
+    </ParagraphContent>
+  );
+};
 
 const Label = styled.label`
   font-weight: 600;
@@ -37,7 +41,7 @@ const ParagraphContent = styled.div<{ separator: boolean }>`
   width: 100%;
   padding: 10px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", Oxygen,
-Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin: 10px 0 10px 0;
   display: flex;
   flex-direction: column;

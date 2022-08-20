@@ -1,15 +1,11 @@
-import React, {
-  FC,/* , useContext */
-  ReactNode
-} from "react";
+import React, { FC /* , useContext */, ReactNode } from "react";
 import styled from "styled-components";
 import { styles } from "../Styles";
 // import { FormContext, FormValues } from "./CustomFormProvider";
 
-
 type FormProps = {
   children?: ReactNode;
-  props?: React.FormHTMLAttributes<HTMLFormElement>
+  props?: React.FormHTMLAttributes<HTMLFormElement>;
   /* controller: (
     onChange: React.ChangeEventHandler<HTMLInputElement>,
     formValues?: FormValues | null
@@ -55,11 +51,9 @@ export const Form: FC<FormProps> = ({ children, props }) => {
     });
   }; */
   return (
-
     <FormComponent {...props}>
       <Content>{/* controller(onChange, formValues) */ children}</Content>
     </FormComponent>
-
   );
 };
 
