@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styled from "styled-components";
-import { styles } from "../Styles";
+import { colors } from "../Styles";
 
 type Props = {
   label?: string;
@@ -92,7 +92,7 @@ const InputField = styled.input<InputProps>`
   border-radius: 5px;
   padding-left: 5px;
   font-size: 1rem;
-  background: ${({ hasError }) => (hasError ? "#ff797933" : styles.colors.ice)};
+  background: ${({ hasError }) => (hasError ? "#ff797933" : colors.ice)};
 
   border: none;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,

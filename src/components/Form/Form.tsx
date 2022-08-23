@@ -1,6 +1,6 @@
 import React, { FC /* , useContext */, ReactNode } from "react";
 import styled from "styled-components";
-import { styles } from "../Styles";
+import { colors } from "../Styles";
 // import { FormContext, FormValues } from "./CustomFormProvider";
 
 type FormProps = {
@@ -59,7 +59,7 @@ export const Form: FC<FormProps> = ({ children, props }) => {
 
 const FormComponent = styled.form`
   margin: 10px auto;
-  border: 1px solid ${styles.colors.silver};
+  border: 1px solid ${colors.silver};
   border-radius: 5px;
   width: 100%;
   max-width: 400px;

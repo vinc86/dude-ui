@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styled from "styled-components";
-import { styles } from "../Styles/styles";
+import { colors } from "../Styles";
 import { Colors } from "../common/types";
 import { ButtonSize, Sizes } from "./types";
 import { getFontColor } from "./utils";
@@ -47,7 +47,7 @@ type StyleProps = {
 };
 const ButtonComponent = styled.button<StyleProps>((props) => {
   return `
-        background: ${styles.colors[props.color as keyof typeof styles.colors]};
+        background: ${colors[props.color as keyof typeof colors]};
         font-size: ${fontSize[props.size as keyof typeof buttonSizes]};
         border-radius: ${props.rounded && "10px"};
         font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
