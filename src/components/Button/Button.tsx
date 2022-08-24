@@ -34,12 +34,18 @@ export const Button: FC<
   color = "ice",
   ...props
 }) => {
-    return (
-      <ButtonComponent {...{ outlined }} {...{ size }} {...{ rounded }} {...{ color }} {...props}>
-        {label}
-      </ButtonComponent>
-    );
-  };
+  return (
+    <ButtonComponent
+      {...{ outlined }}
+      {...{ size }}
+      {...{ rounded }}
+      {...{ color }}
+      {...props}
+    >
+      {label}
+    </ButtonComponent>
+  );
+};
 
 type StyleProps = {
   background?: string;
@@ -49,15 +55,26 @@ type StyleProps = {
   size: string;
 };
 const ButtonComponent = styled.button<StyleProps>((props) => {
-
   return `
-        background: ${!!props.outlined ? colors.white : colors[props.color as keyof typeof colors]};
+        background: ${
+          !!props.outlined
+            ? colors.white
+            : colors[props.color as keyof typeof colors]
+        };
         font-size: ${fontSize[props.size as keyof typeof buttonSizes]};
         border-radius: ${props.rounded && "50px"};
         font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         letter-spacing: 0.5px;
-        color: ${props.outlined ? colors[props.color as keyof typeof colors] : getFontColor(props.color)};
-        border: ${props.outlined ? `2px solid ${colors[props.color as keyof typeof colors]}` : "none"};
+        color: ${
+          props.outlined
+            ? colors[props.color as keyof typeof colors]
+            : getFontColor(props.color)
+        };
+        border: ${
+          props.outlined
+            ? `2px solid ${colors[props.color as keyof typeof colors]}`
+            : "none"
+        };
         font-weight: 600;
         display: flex;
         cursor: pointer;
