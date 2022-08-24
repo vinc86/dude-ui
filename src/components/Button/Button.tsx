@@ -78,7 +78,7 @@ const ButtonComponent = styled.button<StyleProps>((props) => {
         font-weight: 600;
         display: flex;
         cursor: pointer;
-        margin: auto;
+        margin: 0;
         padding: ${buttonSizes[props.size as keyof typeof buttonSizes]};
     `;
 });
