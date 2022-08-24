@@ -76,6 +76,8 @@ const ButtonComponent = styled.button<StyleProps>((props) => {
             : "none"
         };
         font-weight: 600;
+        width: fit-content;
+        height: fit-content;
         display: flex;
         cursor: pointer;
         margin: 0;
