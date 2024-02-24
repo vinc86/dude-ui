@@ -28,6 +28,13 @@
     },
     "include": [
         "src/**/*.ts",
-        "src/**/*.tsx"
+        "src/**/*.tsx",
+        "src/**/*.svg",
+        "src/components/Calendar/helpers.ts",
+        "src/components/Calendar/index.ts",
+        "src/components/Calendar/Day.tsx",
+        "src/components/Calendar/Calendar.tsx",
+        "src/components/Calendar/FeatureCarousel.tsx",
+        "./custom.d.ts"
     ]
 }

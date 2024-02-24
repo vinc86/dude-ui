@@ -14,7 +14,7 @@ module.exports = {
   /** "entry"
    * the entry point
    */
-  entry: "./index.tsx",
+  entry: ["./index.tsx"],
   output: {
     /** "path"
      * the folder path of the output file
@@ -82,6 +82,14 @@ module.exports = {
       {
         test: /\.sa?css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.svg$/,
+        use: ["@svgr/webpack", "url-loader"], // or 'file-loader'
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
